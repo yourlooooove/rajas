@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Rose Day 🌹</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  height:100vh;
+  font-family:'Poppins',sans-serif;
+  background:radial-gradient(circle at top, #3a0f1e, #12060a);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+.page{
+  display:none;
+  width:100%;
+  max-width:430px;
+  background:linear-gradient(160deg,#1b0a10,#2b0f1a);
+  border-radius:32px;
+  padding:28px;
+  text-align:center;
+  box-shadow:0 40px 80px rgba(0,0,0,0.6);
+  animation:fadeUp 1s ease;
+  border:1px solid rgba(255,120,150,0.25);
+}
+
+.page.active{
+  display:block;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(35px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+video{
+  width:82%;
+  max-height:230px;
+  object-fit:cover;
+  border-radius:24px;
+  margin-bottom:18px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.5);
+}
+
+h1{
+  font-family:'Playfair Display',serif;
+  color:#ff9bb3;
+  margin-bottom:12px;
+  letter-spacing:0.5px;
+}
+
+p{
+  font-size:1.02rem;
+  color:#f2cfd8;
+  line-height:1.75;
+}
+
+button{
+  margin-top:26px;
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:32px;
+  background:linear-gradient(135deg,#ff4d6d,#b5173a);
+  color:white;
+  font-size:1rem;
+  cursor:pointer;
+  transition:0.35s;
+  box-shadow:0 10px 25px rgba(255,77,109,0.35);
+}
+
+button:hover{
+  transform:scale(1.06);
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active">
+  <video autoplay loop muted playsinline>
+    <source src="rose1.mp4" type="video/mp4">
+  </video>
+
+  <h1>Happy Rose Day 🌹</h1>
+  <p>
+    Some feelings don’t arrive loudly.  
+    They settle quietly in the heart,  
+    changing the way everything feels.  
+    This rose carries one of those feelings —  
+    soft, deep, and meant only for you.
+  </p>
+  <button onclick="nextPage()">Begin 💖</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+  <video autoplay loop muted playsinline>
+    <source src="rose2.mp4" type="video/mp4">
+  </video>
+
+  <h1>The Meaning of a Rose 🌹</h1>
+  <p>
+    A rose doesn’t need to explain itself.  
+    It simply exists — beautiful, fragile, and honest.  
+    Just like love, it holds both tenderness and strength,  
+    reminding us that real emotions don’t fade easily.
+  </p>
+  <button onclick="nextPage()">Next 🌷</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page">
+  <video autoplay loop muted playsinline>
+    <source src="rose3.mp4" type="video/mp4">
+  </video>
+
+  <h1>You Are My Rose ❤️</h1>
+  <p>
+    Among countless faces and moments,  
+    you are the one my heart always finds.  
+    Your presence feels like comfort and excitement at once —  
+    rare, calming, and impossible to replace.
+  </p>
+  <button onclick="nextPage()">Continue 💕</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page">
+  <video autoplay loop muted playsinline>
+    <source src="rose4.mp4" type="video/mp4">
+  </video>
+
+  <h1>What I Feel 🌙</h1>
+  <p>
+    Loving you isn’t loud or complicated.  
+    It’s the quiet happiness in small moments,  
+    the warmth in simple conversations,  
+    and the calm that follows knowing  
+    someone like you exists in my life.
+  </p>
+  <button onclick="nextPage()">Almost There 💗</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page">
+  <video autoplay loop muted playsinline>
+    <source src="rose5.mp4" type="video/mp4">
+  </video>
+
+  <h1>Forever Begins Here 💍</h1>
+  <p>
+    This Rose Day, I give you more than words.  
+    I give you intention, patience, and my heart.  
+    If love is a journey,  
+    I hope every step somehow leads back to you —  
+    today, tomorrow, and always.
+  </p>
+  <button onclick="alert('Your smile is everything for me my baby  girl 💖')">
+    Always Yours 🥰
+  </button>
+</div>
+
+<script>
+const pages = document.querySelectorAll('.page');
+let currentPage = 0;
+
+function nextPage(){
+  if(currentPage < pages.length - 1){
+    pages[currentPage].classList.remove('active');
+    currentPage++;
+    pages[currentPage].classList.add('active');
+  }
+}
+</script>
+
+</body>
+</html>
